@@ -1,4 +1,5 @@
 import { Pokemon, PokemonClient } from "pokenode-ts";
+import SpriteImage from "./components/SpriteImage";
 
 export default async function Pokedex() {
   const api = new PokemonClient();
@@ -13,6 +14,7 @@ export default async function Pokedex() {
         <p key={index}>{ability.ability.name}</p>
       ))}
 
+      <SpriteImage id={pikachu.id} />
     </div>
   )
 }
