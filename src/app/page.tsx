@@ -7,7 +7,11 @@ export default async function Pokedex() {
   return (
     <div className="flex flex-col items-center justify-center">
 
-      <p>{pikachu.name}</p>
+      <p className="font-bold">{pikachu.name}</p>
+
+      {pikachu.abilities.map((ability, index) => (
+        <p key={index}>{ability.ability.name}</p>
+      ))}
 
     </div>
   )
